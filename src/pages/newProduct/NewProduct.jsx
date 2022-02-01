@@ -24,9 +24,9 @@ export default function NewProduct() {
     });
   };
 
-  const handleSubCat = (e) => {
-    setSubCat(e.target.value.split(","));
-  };
+  // const handleSubCat = (e) => {
+  //   setSubCat(e.target.value.split(","));
+  // };
 
   const handleFeat = (e) => {
     setFeatures(e.target.value.split(","));
@@ -71,7 +71,6 @@ export default function NewProduct() {
           const product = {
             ...inputs,
             img: downloadURL,
-            subcategories: subCat,
             features: features,
           };
           addProduct(product, dispatch);
@@ -126,8 +125,8 @@ export default function NewProduct() {
               <input
                 name="subcategories"
                 type="text"
-                placeholder="Speakers, Amplifiers"
-                onChange={handleSubCat}
+                placeholder="microphones"
+                onChange={handleChange}
               />
             </div>
             <div className="addProductItem">
